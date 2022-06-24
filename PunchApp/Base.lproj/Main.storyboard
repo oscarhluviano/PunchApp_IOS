@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-87" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="C4z-xB-cev">
@@ -254,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAO-mP-IaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750.72463768115949" y="83.705357142857139"/>
+            <point key="canvasLocation" x="729" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hQZ-i6-r7c">
@@ -272,7 +272,7 @@
                                 </constraints>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwV-rQ-eEg">
-                                <rect key="frame" x="16" y="228" width="67" height="31"/>
+                                <rect key="frame" x="16" y="236.5" width="67" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="m1B-X6-zpN"/>
                                 </constraints>
@@ -280,7 +280,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Rewards"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTB-jx-oYT">
-                                <rect key="frame" x="331" y="228" width="67" height="31"/>
+                                <rect key="frame" x="331" y="236.5" width="67" height="22.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="History"/>
                             </button>
@@ -297,15 +297,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiM-1h-Ihk">
-                                <rect key="frame" x="83" y="228" width="248" height="31"/>
+                                <rect key="frame" x="83" y="236.5" width="248" height="22.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Redeem"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-E5-bqs">
-                                <rect key="frame" x="20" y="166" width="374" height="62"/>
+                                <rect key="frame" x="20" y="166" width="374" height="70.5"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-4j-yxA">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-4j-yxA">
                                 <rect key="frame" x="337" y="106" width="61" height="34"/>
                                 <color key="backgroundColor" red="0.92357176539999997" green="0.2632316649" blue="0.26273629069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynE-N1-e4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="84"/>
+            <point key="canvasLocation" x="2316" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Cth-cp-JyH">
