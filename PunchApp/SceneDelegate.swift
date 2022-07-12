@@ -6,17 +6,37 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    func cambiarVistaA (_ vista: String) {
+        var vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        if vista != "" {
+            vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vista)
+        }
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let escena = (scene as? UIWindowScene) else { return }
+        
+        let ventana = UIWindow(windowScene: escena)
+        self.window = ventana
+        // TODO: validar si hay un usuario autenticado, según el tipo de autenticación implementada
+        // autenticación local o custom - UserDefaults / guardar una bandera
+        Auth.auth().addStateDidChangeListener { Autenticacion, Usuario in
+            if Usuario != nil {
+                print ("usuario inición sesión \(Usuario!.email)")
+                self.cambiarVistaA("Home")
+            }
+            else {
+                self.cambiarVistaA("")
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
