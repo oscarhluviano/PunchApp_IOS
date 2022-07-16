@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F60D461759FDB70035716A2 /* Pods_PunchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618F37021F41979DA8A8F74B /* Pods_PunchApp.framework */; };
 		99140B302877C68200C6B9EF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 99140B2F2877C68200C6B9EF /* FirebaseAuth */; };
 		99140B322877C68200C6B9EF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 99140B312877C68200C6B9EF /* FirebaseFirestore */; };
 		99140B342877C68200C6B9EF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99140B332877C68200C6B9EF /* FirebaseFirestoreSwift */; };
@@ -16,6 +17,15 @@
 		99140B3C287A199200C6B9EF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99140B3B287A199200C6B9EF /* HistoryViewController.swift */; };
 		99140B3E287A1FAB00C6B9EF /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99140B3D287A1FAB00C6B9EF /* Reward.swift */; };
 		994802D6287D2EEF001F652D /* RewardDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994802D5287D2EEF001F652D /* RewardDViewController.swift */; };
+		994AD1BE287E25AE004268B5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1BD287E25AE004268B5 /* SignUpViewController.swift */; };
+		994AD1C0287E6F4E004268B5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 994AD1BF287E6F4D004268B5 /* logo.png */; };
+		9958E9E1287DE7870072AB6F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E9E0287DE7870072AB6F /* ProfileViewController.swift */; };
+		9958E9E3287DE7B70072AB6F /* AddRewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E9E2287DE7B70072AB6F /* AddRewardViewController.swift */; };
+		9958E9E5287DE7CD0072AB6F /* AddCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E9E4287DE7CD0072AB6F /* AddCouponViewController.swift */; };
+		9977D52A2881267400967B2F /* alferro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9977D5292881267400967B2F /* alferro.jpg */; };
+		9977D52C2881273200967B2F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977D52B2881273200967B2F /* History.swift */; };
+		9977D52E2881292300967B2F /* HistoryDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977D52D2881292300967B2F /* HistoryDViewController.swift */; };
+		9977D5312881351100967B2F /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 9977D5302881351100967B2F /* Reachability */; };
 		9993A13C283F0D4A00F85DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993A13B283F0D4A00F85DF2 /* AppDelegate.swift */; };
 		9993A13E283F0D4A00F85DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993A13D283F0D4A00F85DF2 /* SceneDelegate.swift */; };
 		9993A140283F0D4A00F85DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993A13F283F0D4A00F85DF2 /* ViewController.swift */; };
@@ -24,14 +34,27 @@
 		9993A148283F0D4F00F85DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9993A146283F0D4F00F85DF2 /* LaunchScreen.storyboard */; };
 		99CD9DBE2877B5D8007B40BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99CD9DBD2877B5D8007B40BF /* GoogleService-Info.plist */; };
 		99CD9DC22877B97A007B40BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CD9DC12877B97A007B40BF /* LoginViewController.swift */; };
+		99D112152881C21200C76469 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D112142881C21200C76469 /* NetworkStatus.swift */; };
+		99F73D81288266B90079C52D /* EditRewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F73D80288266B90079C52D /* EditRewardViewController.swift */; };
+		99F73D8328827D340079C52D /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F73D8228827D340079C52D /* Coupon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CAA20C7B7F5F3BFF9C14D34 /* Pods-PunchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PunchApp.release.xcconfig"; path = "Target Support Files/Pods-PunchApp/Pods-PunchApp.release.xcconfig"; sourceTree = "<group>"; };
+		618F37021F41979DA8A8F74B /* Pods_PunchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PunchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99140B37287A197300C6B9EF /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		99140B39287A198200C6B9EF /* RedeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemViewController.swift; sourceTree = "<group>"; };
 		99140B3B287A199200C6B9EF /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		99140B3D287A1FAB00C6B9EF /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		994802D5287D2EEF001F652D /* RewardDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDViewController.swift; sourceTree = "<group>"; };
+		994AD1BD287E25AE004268B5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		994AD1BF287E6F4D004268B5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9958E9E0287DE7870072AB6F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9958E9E2287DE7B70072AB6F /* AddRewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRewardViewController.swift; sourceTree = "<group>"; };
+		9958E9E4287DE7CD0072AB6F /* AddCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponViewController.swift; sourceTree = "<group>"; };
+		9977D5292881267400967B2F /* alferro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alferro.jpg; sourceTree = "<group>"; };
+		9977D52B2881273200967B2F /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		9977D52D2881292300967B2F /* HistoryDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDViewController.swift; sourceTree = "<group>"; };
 		9993A138283F0D4A00F85DF2 /* PunchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9993A13B283F0D4A00F85DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9993A13D283F0D4A00F85DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +65,10 @@
 		9993A149283F0D4F00F85DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99CD9DBD2877B5D8007B40BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99CD9DC12877B97A007B40BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99D112142881C21200C76469 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		99F73D80288266B90079C52D /* EditRewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRewardViewController.swift; sourceTree = "<group>"; };
+		99F73D8228827D340079C52D /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		A63724F92FE982CA15BDD000 /* Pods-PunchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PunchApp.debug.xcconfig"; path = "Target Support Files/Pods-PunchApp/Pods-PunchApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,19 +78,31 @@
 			files = (
 				99140B302877C68200C6B9EF /* FirebaseAuth in Frameworks */,
 				99140B362877C68200C6B9EF /* FirebaseStorage in Frameworks */,
+				9977D5312881351100967B2F /* Reachability in Frameworks */,
 				99140B322877C68200C6B9EF /* FirebaseFirestore in Frameworks */,
 				99140B342877C68200C6B9EF /* FirebaseFirestoreSwift in Frameworks */,
+				3F60D461759FDB70035716A2 /* Pods_PunchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793936CF8E6E4ADD6B5697A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				618F37021F41979DA8A8F74B /* Pods_PunchApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9993A12F283F0D4A00F85DF2 = {
 			isa = PBXGroup;
 			children = (
 				9993A13A283F0D4A00F85DF2 /* PunchApp */,
 				9993A139283F0D4A00F85DF2 /* Products */,
+				F8D5589E7F5FEFBC5B55D3EE /* Pods */,
+				793936CF8E6E4ADD6B5697A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +117,13 @@
 		9993A13A283F0D4A00F85DF2 /* PunchApp */ = {
 			isa = PBXGroup;
 			children = (
+				994AD1BF287E6F4D004268B5 /* logo.png */,
+				9977D5292881267400967B2F /* alferro.jpg */,
 				9993A13B283F0D4A00F85DF2 /* AppDelegate.swift */,
 				9993A13D283F0D4A00F85DF2 /* SceneDelegate.swift */,
 				9993A13F283F0D4A00F85DF2 /* ViewController.swift */,
-				9993A141283F0D4A00F85DF2 /* Main.storyboard */,
 				9993A144283F0D4F00F85DF2 /* Assets.xcassets */,
+				9993A141283F0D4A00F85DF2 /* Main.storyboard */,
 				9993A146283F0D4F00F85DF2 /* LaunchScreen.storyboard */,
 				9993A149283F0D4F00F85DF2 /* Info.plist */,
 				99CD9DBD2877B5D8007B40BF /* GoogleService-Info.plist */,
@@ -91,9 +132,27 @@
 				99140B39287A198200C6B9EF /* RedeemViewController.swift */,
 				99140B3B287A199200C6B9EF /* HistoryViewController.swift */,
 				99140B3D287A1FAB00C6B9EF /* Reward.swift */,
+				9977D52B2881273200967B2F /* History.swift */,
+				99F73D8228827D340079C52D /* Coupon.swift */,
+				9958E9E0287DE7870072AB6F /* ProfileViewController.swift */,
+				9958E9E2287DE7B70072AB6F /* AddRewardViewController.swift */,
+				9958E9E4287DE7CD0072AB6F /* AddCouponViewController.swift */,
+				994AD1BD287E25AE004268B5 /* SignUpViewController.swift */,
 				994802D5287D2EEF001F652D /* RewardDViewController.swift */,
+				9977D52D2881292300967B2F /* HistoryDViewController.swift */,
+				99D112142881C21200C76469 /* NetworkStatus.swift */,
+				99F73D80288266B90079C52D /* EditRewardViewController.swift */,
 			);
 			path = PunchApp;
+			sourceTree = "<group>";
+		};
+		F8D5589E7F5FEFBC5B55D3EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A63724F92FE982CA15BDD000 /* Pods-PunchApp.debug.xcconfig */,
+				0CAA20C7B7F5F3BFF9C14D34 /* Pods-PunchApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9993A14C283F0D4F00F85DF2 /* Build configuration list for PBXNativeTarget "PunchApp" */;
 			buildPhases = (
+				89DEC6895D15D1F6CDA11CE3 /* [CP] Check Pods Manifest.lock */,
 				9993A134283F0D4A00F85DF2 /* Sources */,
 				9993A135283F0D4A00F85DF2 /* Frameworks */,
 				9993A136283F0D4A00F85DF2 /* Resources */,
+				D0D32C21CB693F99299C141E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -117,6 +178,7 @@
 				99140B312877C68200C6B9EF /* FirebaseFirestore */,
 				99140B332877C68200C6B9EF /* FirebaseFirestoreSwift */,
 				99140B352877C68200C6B9EF /* FirebaseStorage */,
+				9977D5302881351100967B2F /* Reachability */,
 			);
 			productName = PunchApp;
 			productReference = 9993A138283F0D4A00F85DF2 /* PunchApp.app */;
@@ -148,6 +210,7 @@
 			mainGroup = 9993A12F283F0D4A00F85DF2;
 			packageReferences = (
 				99140B2E2877C68200C6B9EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9977D52F2881351000967B2F /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = 9993A139283F0D4A00F85DF2 /* Products */;
 			projectDirPath = "";
@@ -163,8 +226,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994AD1C0287E6F4E004268B5 /* logo.png in Resources */,
 				9993A148283F0D4F00F85DF2 /* LaunchScreen.storyboard in Resources */,
 				99CD9DBE2877B5D8007B40BF /* GoogleService-Info.plist in Resources */,
+				9977D52A2881267400967B2F /* alferro.jpg in Resources */,
 				9993A145283F0D4F00F85DF2 /* Assets.xcassets in Resources */,
 				9993A143283F0D4A00F85DF2 /* Main.storyboard in Resources */,
 			);
@@ -172,19 +237,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89DEC6895D15D1F6CDA11CE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PunchApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D32C21CB693F99299C141E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PunchApp/Pods-PunchApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PunchApp/Pods-PunchApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PunchApp/Pods-PunchApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9993A134283F0D4A00F85DF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9958E9E5287DE7CD0072AB6F /* AddCouponViewController.swift in Sources */,
+				9958E9E3287DE7B70072AB6F /* AddRewardViewController.swift in Sources */,
+				9977D52C2881273200967B2F /* History.swift in Sources */,
+				99F73D8328827D340079C52D /* Coupon.swift in Sources */,
 				99140B38287A197300C6B9EF /* RewardsViewController.swift in Sources */,
 				994802D6287D2EEF001F652D /* RewardDViewController.swift in Sources */,
+				9958E9E1287DE7870072AB6F /* ProfileViewController.swift in Sources */,
 				99CD9DC22877B97A007B40BF /* LoginViewController.swift in Sources */,
 				9993A140283F0D4A00F85DF2 /* ViewController.swift in Sources */,
 				9993A13C283F0D4A00F85DF2 /* AppDelegate.swift in Sources */,
 				99140B3E287A1FAB00C6B9EF /* Reward.swift in Sources */,
 				99140B3A287A198200C6B9EF /* RedeemViewController.swift in Sources */,
 				99140B3C287A199200C6B9EF /* HistoryViewController.swift in Sources */,
+				99F73D81288266B90079C52D /* EditRewardViewController.swift in Sources */,
+				99D112152881C21200C76469 /* NetworkStatus.swift in Sources */,
+				9977D52E2881292300967B2F /* HistoryDViewController.swift in Sources */,
+				994AD1BE287E25AE004268B5 /* SignUpViewController.swift in Sources */,
 				9993A13E283F0D4A00F85DF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +443,7 @@
 		};
 		9993A14D283F0D4F00F85DF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63724F92FE982CA15BDD000 /* Pods-PunchApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +473,7 @@
 		};
 		9993A14E283F0D4F00F85DF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CAA20C7B7F5F3BFF9C14D34 /* Pods-PunchApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -415,6 +533,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9977D52F2881351000967B2F /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -437,6 +563,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99140B2E2877C68200C6B9EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		9977D5302881351100967B2F /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9977D52F2881351000967B2F /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

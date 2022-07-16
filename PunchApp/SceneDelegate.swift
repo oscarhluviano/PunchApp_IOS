@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // autenticación local o custom - UserDefaults / guardar una bandera
         Auth.auth().addStateDidChangeListener { Autenticacion, Usuario in
             if Usuario != nil {
-                print ("usuario inición sesión \(Usuario!.email)")
+                print ("usuario inición sesión \(Usuario!.email!)")
                 self.cambiarVistaA("Home")
             }
             else {

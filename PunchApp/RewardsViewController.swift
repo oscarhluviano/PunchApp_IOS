@@ -7,6 +7,14 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
+import Reachability
+
+class RewardsTableViewCell: UITableViewCell {
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var txtTitle: UILabel!
+    @IBOutlet weak var txtCost: UILabel!
+}
 
 class RewardsViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,7 +22,12 @@ class RewardsViewController:  UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var btnAddReward: UIButton!
     @IBOutlet weak var btnAddCoupon: UIButton!
     
+    @IBOutlet weak var txtPoints: UITextField!
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     
     var rewards = [Reward]()
     
@@ -27,33 +40,18 @@ class RewardsViewController:  UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RewardsTableViewCell
         let reward = rewards[indexPath.row]
         
-        cell.textLabel?.text = reward.title
+        cell.txtTitle.text = reward.title
+        cell.txtCost.text = "Cost: " + reward.cost + " points"
+        cell.imgView.image = UIImage(named: reward.photo)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "detailsReward", sender: self)
-    }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.delegate = self
-        tableView.dataSource = self
-                
-        if(true){
-            btnAddReward.isHidden = true
-        }
-        
-        retreiveRewards()
-
-        // Do any additional setup after loading the view.
     }
     
     func retreiveRewards(){
@@ -72,33 +70,100 @@ class RewardsViewController:  UIViewController, UITableViewDelegate, UITableView
                                             description: document.get("description") as! String,
                                             photo: document.get("photo") as! String)
                         self.rewards.append(reward)
-                        self.tableView.reloadData()
                     }
-                    
+                    self.tableView.reloadData()
                 }
             }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        let nuevoVC = segue.destination as! RewardDViewController
-        // Pass the selected object to the new view controller.
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let dataDic = rewards[indexPath.row]
-            nuevoVC.datos = dataDic
-            tableView.deselectRow(at: indexPath, animated: true)
+        if(segue.identifier == "detailsReward"){
+            let nuevoVC = segue.destination as! RewardDViewController
+            // Pass the selected object to the new view controller.
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dataDic = rewards[indexPath.row]
+                nuevoVC.datos = dataDic
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
         }
         
     }
 
-    /*
-    // MARK: - Navigation
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NetworkManager.isUnreachable { _ in
+            let alert = UIAlertController(title: "Error", message: "No internet", preferredStyle: .alert)
+            let ac1 = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(ac1)
+            self.present(alert, animated: true)
+            self.view.isUserInteractionEnabled = false
+        }
+        
+        NetworkManager.isReachable { _ in
+            self.view.isUserInteractionEnabled = true
+        }
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+                
+        retreiveRewards()
+        
+        txtPoints.isUserInteractionEnabled = false
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let db = Firestore.firestore()
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let docRef = db.collection("users").document(userID)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let userType = (document.get("type") as! String)
+                if(userType == "0"){
+                    self.btnAddReward.isHidden = false
+                    self.btnAddCoupon.isHidden = false
+                }
+                self.txtPoints.text = (document.get("points") as! String)
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
-    */
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NetworkManager.isUnreachable { _ in
+            let alert = UIAlertController(title: "Error", message: "No internet", preferredStyle: .alert)
+            let ac1 = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(ac1)
+            self.present(alert, animated: true)
+            self.view.isUserInteractionEnabled = false
+        }
+        
+        NetworkManager.isReachable { _ in
+            self.view.isUserInteractionEnabled = true
+        }
 
+        let db = Firestore.firestore()
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let docRef = db.collection("users").document(userID)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                self.txtPoints.text = (document.get("points") as! String)
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NetworkManager.isReachable { _ in
+            self.view.isUserInteractionEnabled = true
+        }
+        
+    }
+    
+    
 }
